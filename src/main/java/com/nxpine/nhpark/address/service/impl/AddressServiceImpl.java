@@ -25,5 +25,9 @@ public class AddressServiceImpl implements AddressService {
         return addressRepository.findAll();
     }
 
-   
+    @Override
+    public Addresses getAddressById(Long id) {
+        return addressRepository.findById(id)
+            .orElseThrow(() -> new RuntimeException("Address not found: " + id));
+    }
 }

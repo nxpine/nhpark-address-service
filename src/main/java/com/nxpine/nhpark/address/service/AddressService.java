@@ -5,7 +5,9 @@ import java.util.List;
 import com.nxpine.nhpark.address.domain.Addresses;
 
 public interface AddressService {
-    List<Addresses> getAllAddresses();
+	List<Addresses> getAllAddresses();
+
+	Addresses getAddressById(Long id);
     
 }
 
