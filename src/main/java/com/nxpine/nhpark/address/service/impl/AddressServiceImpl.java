@@ -30,4 +30,9 @@ public class AddressServiceImpl implements AddressService {
         return addressRepository.findById(id)
             .orElseThrow(() -> new RuntimeException("Address not found: " + id));
     }
+
+    @Override
+	public Addresses createAddress(Addresses newAddress) {
+		return addressRepository.save(newAddress);
+	}
 }

@@ -8,6 +8,8 @@ public interface AddressService {
 	List<Addresses> getAllAddresses();
 
 	Addresses getAddressById(Long id);
+
+	Addresses createAddress(Addresses newAddress);
     
 }
 
