@@ -35,4 +35,8 @@ public class AddressServiceImpl implements AddressService {
 	public Addresses createAddress(Addresses newAddress) {
 		return addressRepository.save(newAddress);
 	}
+    @Override
+	public Addresses updateAddress(Long id, Addresses updatedAddress) {
+		return addressRepository.save(updatedAddress);
+	}
 }

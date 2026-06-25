@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -39,6 +40,11 @@ public class AddressController {
     @PostMapping
     public Addresses create(@RequestBody Addresses newAddress) {
     	return addressService.createAddress(newAddress);
-    	
+    	}
+    
+    @PatchMapping("/{id}")
+    public Addresses update(@PathVariable Long id, @RequestBody Addresses updatedAddress) {
+    	return addressService.updateAddress(id, updatedAddress);
     }
+    
 }
