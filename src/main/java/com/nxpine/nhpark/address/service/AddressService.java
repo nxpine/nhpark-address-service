@@ -13,6 +13,9 @@ public interface AddressService {
 	Addresses createAddress(Addresses newAddress);
 
 	Addresses updateAddress(Long id, Addresses updatedAddress);
+
+	void deleteAddress(Long id);
+
     
 }
 

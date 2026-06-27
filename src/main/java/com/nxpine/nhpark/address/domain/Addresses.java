@@ -16,7 +16,12 @@ public class Addresses {
     private String city;
     private String province;
     private String postalCode;
+    
+    @Column(name="country")
     private String country;
+    
+    @Column(name="phone_number")
+    private String phone;
 
     // link to customer
     @Column(name = "customer_id")
